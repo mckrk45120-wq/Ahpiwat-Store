@@ -259,7 +259,8 @@ body::before {
 .hero-stats {
   position: absolute;
   bottom: 60px;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 32px;
   z-index: 1;
