@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Xeno Shop - ร้านขายไอดี Valorant คุณภาพสูง ราคาถูก มีรับประกัน">
+  <meta name="theme-color" content="#ff4d00">
+  <title>Xeno Shop — ร้านขายไอดี Valorant</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+<!-- ================================================================
+     NAVBAR
+     ================================================================ -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="Xeno Shop">
+        <div class="logo-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="20,2 38,12 38,28 20,38 2,28 2,12" fill="none" stroke="#ff4d00" stroke-width="2"/>
+            <polygon points="20,8 32,14 32,26 20,32 8,26 8,14" fill="#ff4d00" opacity="0.2"/>
+            <path d="M13 15 L20 25 L27 15" stroke="#ff4d00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="20" cy="20" r="2" fill="#ff4d00"/>
+          </svg>
+        </div>
+        <span class="logo-text">XENO<span>.</span>SHOP</span>
+      </a>
+
+      <div class="nav-right">
+        <button class="btn-admin" onclick="openLoginModal()" aria-label="Admin Panel">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          ADMIN
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ================================================================
+     HERO SECTION
+     ================================================================ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-lines"></div>
+
+  <!-- Giant emblem watermark -->
+  <svg class="hero-emblem" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <polygon points="200,20 380,110 380,290 200,380 20,290 20,110" fill="none" stroke="white" stroke-width="3"/>
+    <polygon points="200,60 340,130 340,270 200,340 60,270 60,130" fill="none" stroke="white" stroke-width="2"/>
+    <polygon points="200,100 300,150 300,250 200,300 100,250 100,150" fill="none" stroke="white" stroke-width="1.5"/>
+    <path d="M150 160 L200 260 L250 160" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <circle cx="200" cy="210" r="8" fill="white"/>
+  </svg>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">🎮 Valorant Account Store</div>
+      <h1 class="hero-title">
+        <span class="outline">XENO</span>
+        <span class="highlight">SHOP</span>
+      </h1>
+      <p class="hero-sub">ร้านขายไอดี Valorant คุณภาพสูง คัดสรรมาแล้ว รับประกันทุกบัญชี</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary" onclick="scrollToShop()">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+          ดูไอดีทั้งหมด
+        </button>
+        <a href="#shop" class="btn btn-outline">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+          Rank สูง ราคาถูก
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num" id="hero-stat-total">–</div>
+        <div class="stat-label">ไอดีทั้งหมด</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" id="hero-stat-available">–</div>
+        <div class="stat-label">พร้อมขาย</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">รับประกัน</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     MARQUEE
+     ================================================================ -->
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track">
+    <!-- duplicated for seamless loop -->
+    <span class="marquee-item">XENO SHOP</span>
+    <span class="marquee-item">VALORANT ID</span>
+    <span class="marquee-item">RADIANT READY</span>
+    <span class="marquee-item">FULL SKINS</span>
+    <span class="marquee-item">GUARANTEED</span>
+    <span class="marquee-item">BEST PRICE</span>
+    <span class="marquee-item">XENO SHOP</span>
+    <span class="marquee-item">VALORANT ID</span>
+    <span class="marquee-item">RADIANT READY</span>
+    <span class="marquee-item">FULL SKINS</span>
+    <span class="marquee-item">GUARANTEED</span>
+    <span class="marquee-item">BEST PRICE</span>
+  </div>
+</div>
+
+<!-- ================================================================
+     SHOP SECTION
+     ================================================================ -->
+<section id="shop">
+  <div class="container">
+
+    <div class="section-header">
+      <div class="section-eyebrow">คลังไอดี</div>
+      <h2 class="section-title">เลือก<span>ไอดี</span>ของคุณ</h2>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters-bar">
+      <div class="filter-group">
+        <label for="search-name">🔍 ค้นหาชื่อไอดี</label>
+        <input id="search-name" class="filter-input" type="text" placeholder="พิมพ์ชื่อ หรือคำอธิบาย…" autocomplete="off">
+      </div>
+      <div class="filter-group">
+        <label for="filter-rank">🏆 Rank</label>
+        <select id="filter-rank" class="filter-select">
+          <option value="">— ทุก Rank —</option>
+          <option value="Radiant">Radiant</option>
+          <option value="Immortal">Immortal</option>
+          <option value="Ascendant">Ascendant</option>
+          <option value="Diamond">Diamond</option>
+          <option value="Platinum">Platinum</option>
+          <option value="Gold">Gold</option>
+          <option value="Silver">Silver</option>
+          <option value="Bronze">Bronze</option>
+          <option value="Iron">Iron</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="filter-price-min">💰 ราคาต่ำสุด (฿)</label>
+        <input id="filter-price-min" class="filter-input" type="number" placeholder="0" min="0">
+      </div>
+      <div class="filter-group">
+        <label for="filter-price-max">💰 ราคาสูงสุด (฿)</label>
+        <input id="filter-price-max" class="filter-input" type="number" placeholder="ไม่จำกัด" min="0">
+      </div>
+      <div class="filter-group">
+        <label for="filter-status">📋 สถานะ</label>
+        <select id="filter-status" class="filter-select">
+          <option value="">— ทุกสถานะ —</option>
+          <option value="available">พร้อมขาย</option>
+          <option value="sold">ขายแล้ว</option>
+        </select>
+      </div>
+      <button class="btn-clear-filter" onclick="clearFilters()">✕ ล้างค้นหา</button>
+    </div>
+
+    <div class="shop-meta">
+      <div class="results-count" id="results-count"></div>
+    </div>
+
+    <!-- Cards Grid -->
+    <div id="cards-grid">
+      <!-- Populated by script.js -->
+    </div>
+
+  </div>
+</section>
+
+<!-- ================================================================
+     FOOTER
+     ================================================================ -->
+<footer>
+  <div class="footer-logo">XENO<span>.</span>SHOP</div>
+  <div class="footer-divider"></div>
+  <p class="footer-text">© 2025 Xeno Shop — ร้านขายไอดี Valorant คุณภาพ | ติดต่อ Admin สำหรับสอบถาม</p>
+</footer>
+
+<!-- ================================================================
+     TOAST CONTAINER
+     ================================================================ -->
+<div id="toast-container" aria-live="polite"></div>
+
+<!-- ================================================================
+     ADMIN LOGIN MODAL
+     ================================================================ -->
+<div id="login-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Admin Login">
+  <div class="modal">
+    <button class="modal-close" onclick="closeLoginModal()" aria-label="ปิด">✕</button>
+    <div class="modal-title">ADMIN <span>PANEL</span></div>
+    <div class="modal-subtitle">กรอกรหัสผ่าน 6 หลักเพื่อเข้าสู่ระบบจัดการ</div>
+
+    <div class="form-group">
+      <div class="form-label">🔐 รหัสผ่าน</div>
+      <div class="pin-input-wrap">
+        <input type="password" class="pin-digit" maxlength="1" inputmode="numeric" pattern="[0-9]*" autocomplete="off" aria-label="หลักที่ 1">
+        <input type="password" class="pin-digit" maxlength="1" inputmode="numeric" pattern="[0-9]*" autocomplete="off" aria-label="หลักที่ 2">
+        <input type="password" class="pin-digit" maxlength="1" inputmode="numeric" pattern="[0-9]*" autocomplete="off" aria-label="หลักที่ 3">
+        <input type="password" class="pin-digit" maxlength="1" inputmode="numeric" pattern="[0-9]*" autocomplete="off" aria-label="หลักที่ 4">
+        <input type="password" class="pin-digit" maxlength="1" inputmode="numeric" pattern="[0-9]*" autocomplete="off" aria-label="หลักที่ 5">
+        <input type="password" class="pin-digit" maxlength="1" inputmode="numeric" pattern="[0-9]*" autocomplete="off" aria-label="หลักที่ 6">
+      </div>
+      <div id="login-error" class="login-error"></div>
+    </div>
+
+    <button class="btn btn-primary" id="btn-login" style="width:100%;justify-content:center">
+      <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/>
+      </svg>
+      เข้าสู่ระบบ
+    </button>
+  </div>
+</div>
+
+<!-- ================================================================
+     ADMIN PANEL
+     ================================================================ -->
+<div id="admin-panel">
+
+  <!-- Admin Navbar -->
+  <nav class="admin-navbar">
+    <div class="admin-logo">XENO <span>ADMIN</span></div>
+    <div style="display:flex;gap:12px;align-items:center">
+      <button class="btn btn-outline btn-sm" id="btn-close-admin" onclick="closeAdminPanel()">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+        ปิด Dashboard
+      </button>
+      <button class="btn btn-danger btn-sm" id="btn-logout">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/>
+        </svg>
+        ออกจากระบบ
+      </button>
+    </div>
+  </nav>
+
+  <div class="admin-content">
+
+    <!-- Dashboard Stats -->
+    <div class="dashboard-stats">
+      <div class="dash-stat">
+        <div class="dash-stat-num" id="stat-total">0</div>
+        <div class="dash-stat-label">ไอดีทั้งหมด</div>
+      </div>
+      <div class="dash-stat">
+        <div class="dash-stat-num" id="stat-available">0</div>
+        <div class="dash-stat-label">พร้อมขาย</div>
+      </div>
+      <div class="dash-stat">
+        <div class="dash-stat-num" id="stat-sold">0</div>
+        <div class="dash-stat-label">ขายแล้ว</div>
+      </div>
+      <div class="dash-stat">
+        <div class="dash-stat-num" id="stat-revenue">฿0</div>
+        <div class="dash-stat-label">ยอดขายรวม</div>
+      </div>
+    </div>
+
+    <!-- Add Account -->
+    <div class="admin-section-title">➕ <span>เพิ่มไอดีใหม่</span></div>
+    <div class="add-account-card">
+      <form id="add-account-form" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="add-name">ชื่อไอดี *</label>
+            <input id="add-name" class="form-control" type="text" placeholder="เช่น ShadowStrike_TH" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="add-rank">Rank *</label>
+            <select id="add-rank" class="form-control rank-select" required>
+              <option value="">— เลือก Rank —</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="add-skins">จำนวนสกิน</label>
+            <input id="add-skins" class="form-control" type="number" placeholder="0" min="0">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="add-price">ราคา (฿) *</label>
+            <input id="add-price" class="form-control" type="number" placeholder="0" min="0" required>
+          </div>
+          <div class="form-group form-grid-full">
+            <label class="form-label" for="add-desc">รายละเอียด</label>
+            <textarea id="add-desc" class="form-control" placeholder="อธิบายไอดี สกินที่มี จุดเด่น ฯลฯ"></textarea>
+          </div>
+          <div class="form-group form-grid-full">
+            <label class="form-label">รูปภาพไอดี</label>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;flex-wrap:wrap">
+              <!-- Upload -->
+              <div>
+                <div class="image-upload-area">
+                  <input type="file" id="add-image-input" accept="image/*" aria-label="อัปโหลดรูปภาพ">
+                  <div class="upload-icon">🖼️</div>
+                  <div class="upload-label"><strong>คลิกเพื่ออัปโหลด</strong> หรือลากวาง<br><small style="color:var(--white-20)">PNG, JPG สูงสุด 5MB</small></div>
+                </div>
+                <img id="add-image-preview" class="upload-preview" alt="Preview" style="max-width:100%;max-height:120px;display:none;margin-top:8px;border-radius:3px">
+              </div>
+              <!-- URL -->
+              <div>
+                <label class="form-label" for="add-image-url">หรือใส่ URL รูปภาพ</label>
+                <input id="add-image-url" class="form-control" type="url" placeholder="https://…">
+                <div style="margin-top:6px;font-size:12px;color:var(--white-20);font-family:var(--font-ui)">
+                  ถ้าอัปโหลดรูป จะใช้รูปที่อัปโหลดแทน URL
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+            เพิ่มไอดี
+          </button>
+          <button type="reset" class="btn btn-outline">↩ ล้างฟอร์ม</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Account List Table -->
+    <div class="admin-section-title">📋 <span>รายการไอดีทั้งหมด</span></div>
+    <div class="admin-table-wrap">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>รูป</th>
+            <th>ชื่อไอดี</th>
+            <th>Rank</th>
+            <th>สกิน</th>
+            <th>ราคา</th>
+            <th>สถานะ</th>
+            <th>จัดการ</th>
+          </tr>
+        </thead>
+        <tbody id="admin-tbody">
+          <!-- Populated by script.js -->
+        </tbody>
+      </table>
+    </div>
+
+  </div><!-- /admin-content -->
+</div><!-- /admin-panel -->
+
+<!-- ================================================================
+     EDIT MODAL
+     ================================================================ -->
+<div id="edit-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="แก้ไขไอดี">
+  <div class="edit-modal">
+    <button class="modal-close" onclick="closeEditModal()" aria-label="ปิด">✕</button>
+    <div class="modal-title" style="font-size:22px;margin-bottom:4px">แก้ไข<span>ไอดี</span></div>
+    <div class="modal-subtitle" style="margin-bottom:24px">แก้ไขข้อมูลไอดีที่เลือก</div>
+
+    <form id="edit-account-form" novalidate>
+      <div class="form-grid">
+        <div class="form-group">
+          <label class="form-label" for="edit-name">ชื่อไอดี *</label>
+          <input id="edit-name" class="form-control" type="text" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="edit-rank">Rank *</label>
+          <select id="edit-rank" class="form-control rank-select" required>
+            <option value="">— เลือก Rank —</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="edit-skins">จำนวนสกิน</label>
+          <input id="edit-skins" class="form-control" type="number" min="0">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="edit-price">ราคา (฿) *</label>
+          <input id="edit-price" class="form-control" type="number" min="0" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="edit-status">สถานะ</label>
+          <select id="edit-status" class="form-control">
+            <option value="available">พร้อมขาย</option>
+            <option value="sold">ขายแล้ว</option>
+          </select>
+        </div>
+        <div class="form-group form-grid-full">
+          <label class="form-label" for="edit-desc">รายละเอียด</label>
+          <textarea id="edit-desc" class="form-control"></textarea>
+        </div>
+        <div class="form-group form-grid-full">
+          <label class="form-label">รูปภาพ</label>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div>
+              <div class="image-upload-area">
+                <input type="file" id="edit-image-input" accept="image/*" aria-label="เปลี่ยนรูปภาพ">
+                <div class="upload-icon">🔄</div>
+                <div class="upload-label"><strong>เปลี่ยนรูปภาพ</strong></div>
+              </div>
+              <img id="edit-image-preview" alt="Preview" style="max-width:100%;max-height:100px;display:none;margin-top:8px;border-radius:3px">
+            </div>
+            <div>
+              <label class="form-label" for="edit-image-url">URL รูปภาพ</label>
+              <input id="edit-image-url" class="form-control" type="url" placeholder="https://…">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-actions" style="margin-top:8px">
+        <button type="submit" class="btn btn-primary">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/>
+          </svg>
+          บันทึกการแก้ไข
+        </button>
+        <button type="button" class="btn btn-outline" onclick="closeEditModal()">ยกเลิก</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="script.js"></script>
+
+<!-- Update hero stats after load -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      const total = document.getElementById('hero-stat-total');
+      const avail = document.getElementById('hero-stat-available');
+      if (total && window.STATE) {
+        total.textContent = STATE.accounts.length;
+        avail.textContent = STATE.accounts.filter(a => a.status === 'available').length;
+      }
+    }, 300);
+
+    // Re-hook after STATE is ready
+    window.addEventListener('accounts-loaded', () => {
+      const total = document.getElementById('hero-stat-total');
+      const avail = document.getElementById('hero-stat-available');
+      if (total) total.textContent = STATE.accounts.length;
+      if (avail) avail.textContent = STATE.accounts.filter(a => a.status === 'available').length;
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "acc_001",
+    "name": "ShadowStrike_TH",
+    "rank": "Immortal 2",
+    "rankTier": "immortal",
+    "skins": 47,
+    "price": 2500,
+    "status": "available",
+    "image": "https://placehold.co/400x225/1a1a1a/ff4d00?text=ShadowStrike",
+    "description": "บัญชีสวย มีสกิน Phantom หายาก",
+    "createdAt": "2024-01-15"
+  },
+  {
+    "id": "acc_002",
+    "name": "NeonBlade_X",
+    "rank": "Radiant",
+    "rankTier": "radiant",
+    "skins": 89,
+    "price": 8500,
+    "status": "available",
+    "image": "https://placehold.co/400x225/1a1a1a/ff4d00?text=NeonBlade+X",
+    "description": "Full skins หายาก รวม Elderflame ครบชุด",
+    "createdAt": "2024-01-20"
+  },
+  {
+    "id": "acc_003",
+    "name": "VoidHunter_99",
+    "rank": "Diamond 3",
+    "rankTier": "diamond",
+    "skins": 32,
+    "price": 1800,
+    "status": "sold",
+    "image": "https://placehold.co/400x225/1a1a1a/ff4d00?text=VoidHunter",
+    "description": "มีสกิน Glitchpop หลายชิ้น",
+    "createdAt": "2024-02-01"
+  },
+  {
+    "id": "acc_004",
+    "name": "CrimsonAce",
+    "rank": "Ascendant 1",
+    "rankTier": "ascendant",
+    "skins": 55,
+    "price": 3200,
+    "status": "available",
+    "image": "https://placehold.co/400x225/1a1a1a/ff4d00?text=CrimsonAce",
+    "description": "สกิน Prime และ Reaver ครบชุด",
+    "createdAt": "2024-02-10"
+  },
+  {
+    "id": "acc_005",
+    "name": "PhantomKing_TH",
+    "rank": "Platinum 2",
+    "rankTier": "platinum",
+    "skins": 21,
+    "price": 950,
+    "status": "available",
+    "image": "https://placehold.co/400x225/1a1a1a/ff4d00?text=PhantomKing",
+    "description": "เริ่มต้นเล่น มีสกินสวย ราคาประหยัด",
+    "createdAt": "2024-02-15"
+  },
+  {
+    "id": "acc_006",
+    "name": "StormRider_Elite",
+    "rank": "Immortal 3",
+    "rankTier": "immortal",
+    "skins": 73,
+    "price": 5800,
+    "status": "available",
+    "image": "https://placehold.co/400x225/1a1a1a/ff4d00?text=StormRider",
+    "description": "มีสกิน Ion และ Singularity หายาก",
+    "createdAt": "2024-03-01"
+  }
+]
